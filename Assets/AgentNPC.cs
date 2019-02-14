@@ -20,16 +20,19 @@ public abstract class AgentNPC  : Agent, SteeringApplier
 
         listSteerings = new SteeringBehaviour[1];
         listSteerings[0] = new SeekSteering();
+        listSteerings[0].myself = this;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        // TODO: Metodo para seleccionar el steering que se quiera usar que estara en la lista SteeringBehaviour
+
         foreach(SteeringBehaviour sB in listSteerings)
         {
             sB.target = target;
-            steering = sB.getSteering(this);
+            sB.setSteering(this);
             applySteering(null);
         }
         

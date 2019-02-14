@@ -6,8 +6,9 @@ public class CilinderAgent : AgentNPC
 {
     public override bool applySteering(string input)
     {
-        transform.position += Vector3.ClampMagnitude(velocity + steering.lineal * 2, maxSpeed);
-        transform.forward = velocity.normalized;
+       
+        transform.position = transform.position + steering.lineal * maxSpeed;
+
 
         return true;
     }
