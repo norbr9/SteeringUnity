@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeekSteering : SteeringBehaviour
+public class SeekSteering : BasicSteering
 {
 
 
@@ -17,17 +17,10 @@ public class SeekSteering : SteeringBehaviour
 
 
         // Set new rotation
-        myself.transform.rotation = Quaternion.Euler(0,getNewOrientation(myself.transform.rotation.y, agent.steering.lineal),0);
+       agent.steering.angular = getNewOrientation(agent.transform.rotation.y, agent.steering.lineal);
         
     }
 
-
-
-    // Rotacion total para apuntar al target
-    private float getNewOrientation(float orientation, Vector3 velocity){
-        return orientation != Mathf.Atan2(velocity.x,velocity.z) * Mathf.Rad2Deg
-             ? Mathf.Atan2(-velocity.x, velocity.z) * Mathf.Rad2Deg : orientation;
-    }
 
 
 }

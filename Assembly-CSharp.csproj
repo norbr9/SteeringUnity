@@ -56,12 +56,16 @@
      <Compile Include="Assets\Agent.cs" />
      <Compile Include="Assets\AgentNPC.cs" />
      <Compile Include="Assets\AgentPlayer.cs" />
+     <Compile Include="Assets\ArriveSteering.cs" />
+     <Compile Include="Assets\BasicSteering.cs" />
      <Compile Include="Assets\CilinderAgent.cs" />
+     <Compile Include="Assets\FleeSteering.cs" />
      <Compile Include="Assets\Kinematic.cs" />
      <Compile Include="Assets\SeekSteering.cs" />
      <Compile Include="Assets\Steering.cs" />
      <Compile Include="Assets\SteeringApplier.cs" />
      <Compile Include="Assets\SteeringBehaviour.cs" />
+     <Compile Include="Assets\WanderSteering.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/home/norberto/SteeringUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

@@ -19,9 +19,9 @@ public abstract class AgentNPC  : Agent, SteeringApplier
         steering = new Steering();
 
         listSteerings = new SteeringBehaviour[1];
-        listSteerings[0] = new SeekSteering();
-        listSteerings[0].myself = this;
-
+        //listSteerings[0] = new SeekSteering();
+        //listSteerings[0] = new ArriveSteering();
+       listSteerings[0] = new WanderSteering();
     }
 
     // Update is called once per frame
