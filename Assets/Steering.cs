@@ -6,4 +6,11 @@ public class Steering
 {
     public Vector3 lineal;
     public float angular;
+
+
+
+    public void clear(){
+        lineal = Vector3.zero;
+        angular = 0;
+    }
 }

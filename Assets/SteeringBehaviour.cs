@@ -5,8 +5,7 @@ using UnityEngine;
 public abstract class SteeringBehaviour
 {
     public Agent target;
-
-
-    public abstract Steering getSteering(AgentNPC agent);
+ 
+    public abstract void setSteering(AgentNPC agent);
 
 }

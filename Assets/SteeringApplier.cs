@@ -4,5 +4,5 @@ using UnityEngine;
 
 interface SteeringApplier
 {
-    bool applySteering(string input);
+    bool applySteering(Steering sterring);
 }

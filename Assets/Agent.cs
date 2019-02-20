@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Agent : Kinematic
 {
-   
+    public float interiorRadius;
+    public float exteriorRadius;
 }

@@ -9,10 +9,11 @@ public abstract class Kinematic : MonoBehaviour
     public float maxSpeed;
     public float maxRotation;
 
+
+    // Transform incluye position y rotation
     public Transform transform;
-    public Vector3 velocity;
-    public Vector3 rotation;
 
 
+   
     
 }

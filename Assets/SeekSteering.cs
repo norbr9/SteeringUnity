@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeekSteering : SteeringBehaviour
+public class SeekSteering : BasicSteering
 {
-    public override Steering getSteering(AgentNPC agent)
-    {   
 
+
+    public override void setSteering(AgentNPC agent)
+    {   
 
         // Get direction to the target
         agent.steering.lineal = target.transform.position  - agent.transform.position;
@@ -15,8 +16,11 @@ public class SeekSteering : SteeringBehaviour
         agent.steering.lineal *= agent.maxSpeed;
 
 
-
-        return agent.steering;
-
+        // Set new rotation
+       agent.steering.angular = getNewOrientation(agent.transform.rotation.y, agent.steering.lineal);
+        
     }
+
+
+
 }

@@ -18,7 +18,7 @@ public class AgentPlayer : Agent, SteeringApplier
     }
 
 
-    public bool applySteering(string input)
+    public bool applySteering(Steering steering)
     {
         throw new System.NotImplementedException();
     }
